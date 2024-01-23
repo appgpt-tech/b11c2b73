@@ -8,12 +8,12 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { ChildrenList, ChildrenCreate, ChildrenEdit} from "./resources/Children";
-import { LessonsList, LessonsCreate, LessonsEdit} from "./resources/Lessons";
+import { StudentList, StudentCreate, StudentEdit} from "./resources/Student";
+import { ActivityList, ActivityCreate, ActivityEdit} from "./resources/Activity";
 import { AttendanceList, AttendanceCreate, AttendanceEdit} from "./resources/Attendance";
-import ChildrenIcon from "@mui/icons-material/ChildCare";
-import LessonsIcon from "@mui/icons-material/Book";
-import AttendanceIcon from "@mui/icons-material/Event"; 
+import StudentIcon from "@mui/icons-material/Person";
+import ActivityIcon from "@mui/icons-material/SportsEsports";
+import AttendanceIcon from "@mui/icons-material/EventAvailable"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -75,19 +75,19 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="Children" options={{label:"Children"}} 
-list={ChildrenList}
-create={ChildrenCreate}
-edit={ChildrenEdit}
-recordRepresentation="childid"
-icon={ChildrenIcon}/>
-<Resource name="Lessons" options={{label:"Lessons"}} 
-list={LessonsList}
-create={LessonsCreate}
-edit={LessonsEdit}
-recordRepresentation="lessonid"
-icon={LessonsIcon}/>
-<Resource name="Attendance" options={{label:"Attendance"}} 
+    <Resource name="Student" options={{label:"student"}} 
+list={StudentList}
+create={StudentCreate}
+edit={StudentEdit}
+recordRepresentation="studentid"
+icon={StudentIcon}/>
+<Resource name="Activity" options={{label:"activity"}} 
+list={ActivityList}
+create={ActivityCreate}
+edit={ActivityEdit}
+recordRepresentation="activityid"
+icon={ActivityIcon}/>
+<Resource name="Attendance" options={{label:"attendance"}} 
 list={AttendanceList}
 create={AttendanceCreate}
 edit={AttendanceEdit}

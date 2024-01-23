@@ -10,13 +10,13 @@ export class AttendanceEntity {
 Id: string;
 
 @Column({nullable: true})
-Childid: string;
+Date: string;
 
 @Column({nullable: true})
-Lessonid: string;
+Studentid: string;
 
 @Column({nullable: true})
-Dateoflesson: string;
+Activityid: string;
 
 
 }

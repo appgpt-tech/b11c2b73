@@ -7,13 +7,10 @@ export class StudentEntity {
   id: number;
 
   @Column({nullable: true})
-Studentid: string;
+Id: string;
 
 @Column({nullable: true})
 Name: string;
-
-@Column({nullable: true})
-Id: string;
 
 
 }

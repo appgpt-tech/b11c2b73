@@ -41,17 +41,16 @@ const ListActions = () => (
 );
 const ActivityTitle = () => {
   const record = useRecordContext();
-  return <span>Activity {record ? `"${ record.Activityid }"` : ""}</span>;
+  return <span>Activity {record ? `"${ record.Id }"` : ""}</span>;
 };
 
 export const ActivityList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <NumberField source="Activityid" />
+          <TextField source="Id" />
 <TextField source="Description" />
-<TextField source="Nameoftutor" />
-<TextField source="Costperlesson" />
-<NumberField source="Id" /><EditButton />
+<TextField source="Tutor" />
+<TextField source="Costperlesson" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -60,11 +59,10 @@ export const ActivityList = () => (
 export const ActivityEdit = () => (
                     <Edit title={<ActivityTitle />}>
                       <SimpleForm>
-                          <NumberInput source="Activityid"   />
+                          <TextInput source="Id"   disabled/>
 <TextInput source="Description"   />
-<TextInput source="Nameoftutor"   />
+<TextInput source="Tutor"   />
 <TextInput source="Costperlesson"   />
-<NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -72,18 +70,16 @@ export const ActivityEdit = () => (
 export const ActivityCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <NumberInput source="Activityid"   />
+                                        <TextInput source="Id"   disabled/>
 <TextInput source="Description"   />
-<TextInput source="Nameoftutor"   />
+<TextInput source="Tutor"   />
 <TextInput source="Costperlesson"   />
-<NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
-,
 ,
 ,
 ,

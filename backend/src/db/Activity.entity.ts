@@ -13,7 +13,7 @@ Id: string;
 Description: string;
 
 @Column({nullable: true})
-Tutor: string;
+Tutorname: string;
 
 @Column({nullable: true})
 Costperlesson: string;

@@ -7,19 +7,16 @@ export class ActivityEntity {
   id: number;
 
   @Column({nullable: true})
-Activityid: string;
+Id: string;
 
 @Column({nullable: true})
 Description: string;
 
 @Column({nullable: true})
-Tutorname: string;
+Nameoftutor: string;
 
 @Column({nullable: true})
 Costperlesson: string;
-
-@Column({nullable: true})
-Id: string;
 
 
 }

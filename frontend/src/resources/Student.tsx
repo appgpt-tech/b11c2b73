@@ -41,16 +41,16 @@ const ListActions = () => (
 );
 const StudentTitle = () => {
   const record = useRecordContext();
-  return <span>Student {record ? `"${ record.Id }"` : ""}</span>;
+  return <span>Student {record ? `"${ record.Studentid }"` : ""}</span>;
 };
 
 export const StudentList = () => (
       <List actions={<ListActions  />} filters={ResourceFilters} >
         <DatagridConfigurable>
-          <TextField source="Id" />
+          <NumberField source="Studentid" />
 <TextField source="Name" />
 <TextField source="Surname" />
-<TextField source="Email" /><EditButton />
+<NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -59,10 +59,10 @@ export const StudentList = () => (
 export const StudentEdit = () => (
                     <Edit title={<StudentTitle />}>
                       <SimpleForm>
-                          <TextInput source="Id"   disabled/>
+                          <NumberInput source="Studentid"   />
 <TextInput source="Name"   />
 <TextInput source="Surname"   />
-<TextInput source="Email"   />
+<NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
                   );
@@ -70,10 +70,10 @@ export const StudentEdit = () => (
 export const StudentCreate = () => (
                                   <Create>
                                     <SimpleForm>
-                                        <TextInput source="Id"   disabled/>
+                                        <NumberInput source="Studentid"   />
 <TextInput source="Name"   />
 <TextInput source="Surname"   />
-<TextInput source="Email"   />
+<NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
                                 );

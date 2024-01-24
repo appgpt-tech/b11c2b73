@@ -3,8 +3,8 @@ import { DataSource } from "typeorm";
 import { DBConfiguration } from "./Configuration";
 import { SettingsEntity } from "./db/Settings.entity";
 //autogenerate imports based on resources
-import { UserEntity } from "./db/User.entity";
-import { CardEntity } from "./db/Card.entity";
+import { UsersEntity } from "./db/Users.entity";
+import { CardsEntity } from "./db/Cards.entity";
 
 export class Database {
   static dbConfiguration: DBConfiguration;
@@ -15,7 +15,7 @@ export class Database {
     let dbConfig: any = dbConfiguration as any;
     //Autogenerate entities array from resource names
 
-    dbConfig.entities = [SettingsEntity, UserEntity, CardEntity];
+    dbConfig.entities = [SettingsEntity, UsersEntity, CardsEntity];
     Database.ds = new DataSource(dbConfig);
     await Database.ds.initialize();
 
@@ -25,15 +25,15 @@ export class Database {
     await Database.Seed();
   }
   static async Seed() {
-    let data: any = {"User":[],"Card":[]};
+    let data: any = {"Users":[],"Cards":[]};
     //Autogenerate multiple such calls ie for each resource and its data object
     let isSeeded = await this.IsSeeded();
     //if (!isSeeded) {
     //forcing app recreation
     if (true){
       console.log('   Seeding database...');
-      await this.SeedResource("UserEntity", data.User);
-await this.SeedResource("CardEntity", data.Card); 
+      await this.SeedResource("UsersEntity", data.Users);
+await this.SeedResource("CardsEntity", data.Cards); 
       await this.SeedResource("SettingsEntity", {
         settingname: "isSeeded",
         settingvalue: "true",

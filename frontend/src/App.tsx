@@ -12,8 +12,8 @@ import { StudentList, StudentCreate, StudentEdit} from "./resources/Student";
 import { ActivityList, ActivityCreate, ActivityEdit} from "./resources/Activity";
 import { AttendanceList, AttendanceCreate, AttendanceEdit} from "./resources/Attendance";
 import StudentIcon from "@mui/icons-material/Person";
-import ActivityIcon from "@mui/icons-material/SportsSoccer";
-import AttendanceIcon from "@mui/icons-material/Event"; 
+import ActivityIcon from "@mui/icons-material/Event";
+import AttendanceIcon from "@mui/icons-material/AccessTime"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {

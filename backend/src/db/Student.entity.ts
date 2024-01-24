@@ -15,5 +15,8 @@ Name: string;
 @Column({nullable: true})
 Surname: string;
 
+@Column({nullable: true})
+Email: string;
+
 
 }

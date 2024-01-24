@@ -19,6 +19,9 @@ Serial: string;
 Price: string;
 
 @Column({nullable: true})
+Serialxref: string;
+
+@Column({nullable: true})
 Id: string;
 
 

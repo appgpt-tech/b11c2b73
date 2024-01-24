@@ -49,7 +49,8 @@ export const StudentList = () => (
         <DatagridConfigurable>
           <TextField source="Id" />
 <TextField source="Name" />
-<TextField source="Surname" /><EditButton />
+<TextField source="Surname" />
+<TextField source="Email" /><EditButton />
 
         </DatagridConfigurable>
       </List>
@@ -61,6 +62,7 @@ export const StudentEdit = () => (
                           <TextInput source="Id"   disabled/>
 <TextInput source="Name"   />
 <TextInput source="Surname"   />
+<TextInput source="Email"   />
                       </SimpleForm>
                     </Edit>
                   );
@@ -71,12 +73,14 @@ export const StudentCreate = () => (
                                         <TextInput source="Id"   disabled/>
 <TextInput source="Name"   />
 <TextInput source="Surname"   />
+<TextInput source="Email"   />
                                     </SimpleForm>
                                   </Create>
                                 );
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 

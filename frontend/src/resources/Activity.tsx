@@ -49,7 +49,7 @@ export const ActivityList = () => (
         <DatagridConfigurable>
           <TextField source="Id" />
 <TextField source="Description" />
-<TextField source="Tutor" />
+<TextField source="Tutorname" />
 <TextField source="Costperlesson" /><EditButton />
 
         </DatagridConfigurable>
@@ -61,7 +61,7 @@ export const ActivityEdit = () => (
                       <SimpleForm>
                           <TextInput source="Id"   disabled/>
 <TextInput source="Description"   />
-<TextInput source="Tutor"   />
+<TextInput source="Tutorname"   />
 <TextInput source="Costperlesson"   />
                       </SimpleForm>
                     </Edit>
@@ -72,7 +72,7 @@ export const ActivityCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="Id"   disabled/>
 <TextInput source="Description"   />
-<TextInput source="Tutor"   />
+<TextInput source="Tutorname"   />
 <TextInput source="Costperlesson"   />
                                     </SimpleForm>
                                   </Create>

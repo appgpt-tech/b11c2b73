@@ -8,10 +8,10 @@ import { authProvider, apInitialize } from "./authProvider";
 import { i18nProvider } from "./i18nProvider";
 import LoginPage, { Login } from "./Login";
 import data from "./data";
-import { UserList, UserCreate, UserEdit} from "./resources/User";
-import { CardList, CardCreate, CardEdit} from "./resources/Card";
-import UserIcon from "@mui/icons-material/Person";
-import CardIcon from "@mui/icons-material/CreditCard"; 
+import { UsersList, UsersCreate, UsersEdit} from "./resources/Users";
+import { CardsList, CardsCreate, CardsEdit} from "./resources/Cards";
+import UsersIcon from "@mui/icons-material/People";
+import CardsIcon from "@mui/icons-material/Collections"; 
 // SUPERTOKENS
 import React from "react";
 import SuperTokens, {
@@ -73,18 +73,18 @@ const App = () => (
         dashboard={Dashboard}
         
       >
-    <Resource name="User" options={{label:"user"}} 
-list={UserList}
-create={UserCreate}
-edit={UserEdit}
+    <Resource name="Users" options={{label:"Users"}} 
+list={UsersList}
+create={UsersCreate}
+edit={UsersEdit}
 recordRepresentation="userid"
-icon={UserIcon}/>
-<Resource name="Card" options={{label:"card"}} 
-list={CardList}
-create={CardCreate}
-edit={CardEdit}
+icon={UsersIcon}/>
+<Resource name="Cards" options={{label:"Cards"}} 
+list={CardsList}
+create={CardsCreate}
+edit={CardsEdit}
 recordRepresentation="cardid"
-icon={CardIcon}/>
+icon={CardsIcon}/>
     <CustomRoutes noLayout>
       {/*This renders the login UI on the /auth route*/}
       {getSuperTokensRoutesForReactRouterDom(reactRouterDom)}

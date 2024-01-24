@@ -51,6 +51,7 @@ export const CardList = () => (
 <TextField source="Cardname" />
 <TextField source="Serial" />
 <TextField source="Price" />
+<TextField source="Serialxref" />
 <NumberField source="Id" /><EditButton />
 
         </DatagridConfigurable>
@@ -64,6 +65,7 @@ export const CardEdit = () => (
 <TextInput source="Cardname"   />
 <TextInput source="Serial"   />
 <TextInput source="Price"   />
+<TextInput source="Serialxref"   />
 <NumberInput source="Id"   disabled/>
                       </SimpleForm>
                     </Edit>
@@ -76,6 +78,7 @@ export const CardCreate = () => (
 <TextInput source="Cardname"   />
 <TextInput source="Serial"   />
 <TextInput source="Price"   />
+<TextInput source="Serialxref"   />
 <NumberInput source="Id"   disabled/>
                                     </SimpleForm>
                                   </Create>
@@ -83,6 +86,7 @@ export const CardCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 ,

@@ -12,5 +12,8 @@ Id: string;
 @Column({nullable: true})
 Name: string;
 
+@Column({nullable: true})
+Surname: string;
+
 
 }

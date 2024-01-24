@@ -49,6 +49,7 @@ export const AttendanceList = () => (
         <DatagridConfigurable>
           <TextField source="Id" />
 <TextField source="Date" />
+<TextField source="Time" />
 <TextField source="Studentid" />
 <TextField source="Activityid" /><EditButton />
 
@@ -61,6 +62,7 @@ export const AttendanceEdit = () => (
                       <SimpleForm>
                           <TextInput source="Id"   disabled/>
 <TextInput source="Date"   />
+<TextInput source="Time"   />
 <TextInput source="Studentid"   />
 <TextInput source="Activityid"   />
                       </SimpleForm>
@@ -72,6 +74,7 @@ export const AttendanceCreate = () => (
                                     <SimpleForm>
                                         <TextInput source="Id"   disabled/>
 <TextInput source="Date"   />
+<TextInput source="Time"   />
 <TextInput source="Studentid"   />
 <TextInput source="Activityid"   />
                                     </SimpleForm>
@@ -80,6 +83,7 @@ export const AttendanceCreate = () => (
 
 const ResourceFilters = [
       <TextInput source="q" label="Search" alwaysOn />,
+,
 ,
 ,
 ,

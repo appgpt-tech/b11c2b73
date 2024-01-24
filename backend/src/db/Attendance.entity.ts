@@ -13,6 +13,9 @@ Id: string;
 Date: string;
 
 @Column({nullable: true})
+Time: string;
+
+@Column({nullable: true})
 Studentid: string;
 
 @Column({nullable: true})
